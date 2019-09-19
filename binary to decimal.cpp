@@ -1,19 +1,15 @@
 #include<stdio.h>
 int main()
 {
-	int r,n,i,count = 0,sum ,sum1 = 0;
-	printf("enter the number:");
+	int i = 1,n,rem,decimal = 0;
+	printf("enter the binary number :");
 	scanf("%d",&n);
 	while (n != 0) {
-	      r = n % 10;
-	      sum = 1;
-	      for ( i = 0;i < count;i++) {
-	      	   sum = sum * 2;
-	      }
-		  sum = r * sum;
-		  count = count + 1;
-		  sum1 =  sum1 + sum;
-	      n = n / 10;
+		rem = n % 10;
+		decimal = decimal + rem * i;
+		n = n / 10;
+		i = i * 2;
 	}
-	printf("\n%d",sum1);
+	printf("%d",decimal);
+	
 }
